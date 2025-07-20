@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofelia – Lucia Chefneux - Therapist and Spiritual Coach</title>
+    <meta name="description" content="Ofelia Lucia Chefneux - Terapeut cuantic și spiritual coach cu peste 12 ani experiență. Ofer terapie individuală, deblocare energetică și coaching pentru pace interioară și transformare personală. Programează o ședință!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Variabile CSS pentru o Paletă de Culori Coezivă */
+        :root {
+            --color-primary: #CC6945; /* Portocaliu Terracota - Principal */
+            --color-primary-dark: #B85C3A; /* Portocaliu Terracota - Întunecat pentru hover */
+            --color-secondary: #72a20f; /* Verde Intens - Accent Natural */
+            --color-secondary-dark: #638e0b; /* Verde Intens - Întunecat pentru hover */
+            --color-tertiary: #7BA7BC; /* Albastru Seren - Accent Liniștitor */
+            --color-tertiary-light: #E6F3F7; /* Albastru Seren - Foarte Pal */
+
+            --color-text-dark: #2D3748; /* Gri Profund - Text principal */
+            --color-text-medium: #4A5568; /* Gri Cald Mediu - Text secundar */
+            --color-text-light: #718096; /* Gri Cald Deschis - Text subtil */
+
+            --color-bg-warm-white: #FEFEFE; /* Alb Cald - Fundal principal */
+            --color-bg-light-terracota: #F7E6DD; /* Terracota Foarte Pal - Fundal secțiuni */
+            --color-bg-light-green: #F0F7F0; /* Verde Foarte Pal - Fundal secțiuni naturale */
+            --color-bg-light-blue: #F8FAFB; /* Albastru Foarte Pal - Fundal secțiuni de serenitate */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset pentru bara de navigație fixă */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-warm-white);
+            color: var(--color-text-dark);
+            line-height: 1.6; /* Îmbunătățește lizibilitatea */
+            padding-top: 80px; /* Adaugă padding pentru a compensa bara de navigație fixă */
+        }
+        
+        /* Setări pentru Imaginea de Cover */
+        .header-bg {
+            background-image: url('Cover.webp'); /* Modificat la fișier local */
+            background-size: cover;
+            background-position: center 25%;
+            height: 320px;
+            overflow: hidden;
+            border-bottom-left-radius: 20px; /* Colțuri rotunjite */
+            border-bottom-right-radius: 20px;
+        }
+        
+        /* Fundaluri de Secțiuni - Utilizând variabile */
+        .bio-section-bg { background-color: var(--color-bg-warm-white); }
+        .section-bg-light { background-color: var(--color-bg-warm-white); }
+        .section-bg-dark, .section-bg-accent { background-color: var(--color-bg-light-terracota); }
+        .section-bg-nature { background-color: var(--color-bg-light-green); }
+        .section-bg-serenity { background-color: var(--color-bg-light-blue); }
+        
+        /* Accente de Fundal pentru Secțiuni/Carduri */
+        .section-bg-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .section-bg-secondary {
+            background-color: var(--color-secondary);
+            color: white;
+        }
+        .section-bg-tertiary-light {
+            background-color: var(--color-tertiary-light);
+            color: var(--color-text-dark);
+        }
+
+        /* Culori de Text - Utilizând variabile */
+        .text-primary-color { color: var(--color-primary); }
+        .text-secondary-color { color: var(--color-secondary); }
+        .text-tertiary-color { color: var(--color-tertiary); }
+        .text-gray-900 { color: var(--color-text-dark); }
+        .text-gray-800 { color: var(--color-text-dark); }
+        .text-gray-700 { color: var(--color-text-medium); }
+        .text-gray-600 { color: var(--color-text-light); }
+        
+        /* Butoane - Stil îmbunătățit */
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0.75rem 1.75rem; /* Padding puțin mai generos */
+            border-radius: 0.75rem; /* Margini mai rotunjite */
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(204, 105, 69, 0.25); /* Umbră mai pronunțată */
+        }
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px); /* Efect subtil la hover */
+            box-shadow: 0 6px 15px rgba(204, 105, 69, 0.35);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(114, 162, 15, 0.25); 
+        }
+        .btn-secondary:hover {
+            background-color: var(--color-secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(114, 162, 15, 0.35);
+        }
+
+        /* Elemente Specifice Designului */
+        .name-title-container {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .name-title-text {
+            font-family: 'Playfair Display', serif; /* Font elegant */
+            font-weight: 500; /* Greutate medie pentru titlu */
+            font-size: 2.8rem;
+            color: var(--color-text-dark);
+            letter-spacing: -0.02em; /* Spațiere mai strânsă pentru titluri */
+        }
+        .subtitle-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            color: var(--color-text-medium);
+        }
+        .leaf-icon {
+            font-size: 2.2rem; /* Icon mai mare */
+            color: var(--color-secondary);
+            margin-right: 0.75rem;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        /* Carduri cu efecte îmbunătățite */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px); /* Efect de ridicare mai pronunțat */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Umbră mai mare */
+        }
+        
+        /* Subsol - Gradient subtil și colțuri rotunjite */
+        footer {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .name-title-text {
+                font-size: 2.2rem; /* Dimensiune mai mică pe mobil */
+            }
+            .subtitle-text {
+                font-size: 1.1rem; /* Dimensiune mai mică pe mobil */
+                margin-left: 2.5rem; /* Ajustare pe mobil */
+            }
+            .leaf-icon {
+                font-size: 1.8rem;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%; /* Butoane pe lățime completă pe mobil */
+                margin-bottom: 0.5rem;
+            }
+            /* Adjust quote size on mobile */
+            .section-serenity-quote {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .subtitle-text {
+                margin-left: 3.5rem; /* Ajustare pe desktop pentru aliniere cu iconița */
+            }
+        }
+
+        /* Stiluri pentru Navigația Fixă */
+        .nav-link {
+            color: var(--color-text-medium);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--color-primary);
+        }
+
+        /* Stiluri pentru Logo în Navigație */
+        .logo-nav {
+            height: 40px; /* Înălțime implicită pentru mobil */
+            width: auto; /* Lățime automată pentru a păstra proporțiile */
+            display: block; /* Asigură-te că este un element de bloc pentru aliniere */
+        }
+
+        @media (min-width: 768px) { /* Pentru ecrane mai mari (desktop) */
+            .logo-nav {
+                height: 48px; /* Înălțime mai mare pe desktop */
+            }
+        }
+        /* Asigură că elementele din containerul navigației sunt aliniate vertical */
+        .nav .container {
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg py-4 px-4 md:px-8">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#">
+                <img src="logo.png" alt="Ofelia Logo" class="h-10 md:h-12 logo-nav">
+            </a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#despre-mine" class="nav-link">About me</a></li>
+                <li><a href="#cred-in" class="nav-link">Values</a></li>
+                <li><a href="#activitati" class="nav-link">Services</a></li>
+                <li><a href="#servicii" class="nav-link">Appointments</a></li>
+                <li><a href="#testimoniale" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button id="hamburger-btn" class="md:hidden text-gray-700 focus:outline-none focus:text-gray-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#despre-mine" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Despre mine</a></li>
+                <li><a href="#cred-in" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Valori</a></li>
+                <li><a href="#activitati" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Servicii</a></li>
+                <li><a href="#servicii" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Programari</a></li>
+                <li><a href="#testimoniale" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Testimoniaes</a></li>
+                <li><a href="#contact" class="mobile-nav-link text-lg font-medium text-gray-800 hover:text-primary-color">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header-bg relative -mt-20">
+    </header>
+
+    <div class="bio-section-bg py-8 md:py-12 name-title-container">
+        <div class="container mx-auto px-4 flex flex-col items-start">
+            <h1 class="name-title-text flex items-center mb-2">
+                <span class="leaf-icon">🌿</span> Ofelia – Lucia Chefneux
+            </h1>
+            <p class="subtitle-text">Quantum Therapist, Life &amp; Spiritual Coach</p>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section id="despre-mine" class="flex flex-col md:flex-row items-center md:items-start gap-8 py-16">
+            <div class="md:w-1/3 flex justify-center">
+                <img src="Profil_Ofi.webp" alt="Ofelia – Lucia Chefneux - Terapeut și Life Coach" class="rounded-lg shadow-lg w-full max-w-sm card-hover">
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="text-3xl font-semibold mb-4 text-gray-900">About me</h2>
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    Hi! I'm Ofelia, and I'm here for you. Because I've understood my purpose, I'm here to support you, whenever you need me, with maximum dedication. 
+                </p>
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    I'm a quantum therapy specialist and spiritual coach with over 12 years of experience in the field. I'm happy to be a trusted guide on your path to healing and growth. My approach is relaxed, authentic, and always present, to build a safe and trusting relationship together. 
+                </p>
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    I offer understanding and compassion, always tailored to your unique needs. I listen with an open heart and without judgment, to help you validate your emotions and heal traumas, whether physical or emotional. I'm here to support you in overcoming blockages and making inner transformations, so you can rediscover your emotional and spiritual balance. 
+                </p>
+                <p class="leading-relaxed text-gray-700">
+                    As a mentor and spiritual guide, I encourage you to look at life from different perspectives and find hope, even when it seems difficult. With patience, I help you move towards a holistic state of well-being and personal development, to live a fulfilling, relaxed, and harmonious life. 
+                </p>
+            </div>
+        </section>
+
+        <section id="cred-in" class="py-16 text-center section-bg-nature rounded-lg shadow-md mb-12">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-900">Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover">
+                    <h3 class="text-2xl font-medium mb-2 text-gray-900">Empathic and synthetic therapeutic transformation</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        TAuthentic transformation respects your inner rhythm. Therapy unfolds naturally, without force, so that the healing process is profound, harmonious, and stable. I work with gentleness and presence, so that each transformation settles within you in a balanced and natural way
+                    </p>
+                </div>
+                <div class="section-bg-primary p-6 rounded-lg shadow-sm card-hover">
+                    <h3 class="text-2xl font-medium mb-2 text-white">Personal Transformation</h3>
+                    <p class="text-white text-sm leading-relaxed">
+                        he results of quantum therapy are truly incredible, profoundly transformative! It doesn't rely on simple 'character evolution' or a superior version of the ego, but rather opens the gates to an invaluable revelation: regaining authentic connection with our primordial, pure self, untouched by the illusions of magic and the matrix that surrounds us. It's a liberation, a return to our own essence, a soulful rebirth! 
+                    </p>
+                </div>
+                <div class="section-bg-secondary p-6 rounded-lg shadow-sm card-hover">
+                    <h3 class="text-2xl font-medium mb-2 text-white">Inner Peace</h3>
+                    <p class="text-white text-sm leading-relaxed">
+                        Inner peace is not imposed, but revealed when you learn to listen to your inner rhythm. Through the spiritual training offered by A Course in Miracles and through practices of reconnecting with the Self, I gently guide you to a stable state of deep stillness and balance. To more easily approach the metaphysics contained in A Course in Miracles, I have created "The 3-Step Course" - an accessible introduction to the dynamics of spiritual transformation proposed by the Course, structured in 3-4 seminars of theory and practice of the state of "being". 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="activitati" class="py-16 text-center">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-900">Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover text-left">
+                    <h3 class="text-2xl font-medium mb-2 text-gray-900">Individual Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Remote and/or in-person quantum therapy sessions. Therapy sessions will be conducted at specific intervals (days/weeks), determined by quantum scans and tailored to individual psycho-emotional needs. The therapist will provide guidance and accountability to help you achieve your desired outcome. 
+                    </p>
+                </div>
+                <div class="section-bg-primary p-6 rounded-lg shadow-md card-hover text-left">
+                    <h3 class="text-2xl font-medium mb-2 text-white">Full unblocking, scanning and power cleaning</h3>
+                    <p class="text-white leading-relaxed text-sm">
+                        Right from the first therapy session, energetic blockages and emotional barriers that hinder and underlie initial pathologies and symptoms will be removed. A plan will be developed outlining the types of therapy (remote or in-person) and their number. 
+                    </p>
+                </div>
+                <div class="section-bg-secondary p-6 rounded-lg shadow-md card-hover text-left">
+                    <h3 class="text-2xl font-medium mb-2 text-white">Quantum therapy protocols</h3>
+                    <p class="text-white leading-relaxed text-sm">
+                        RHarmonious couple relationships. Fertility protocol. Parent-child relationships and school performance. Animals, plants, spaces. 
+                    </p>
+                </div>
+                <div class="section-bg-tertiary-light p-6 rounded-lg shadow-md card-hover text-left">
+                    <h3 class="text-2xl font-medium mb-2 text-gray-900">Spiritual coaching</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        'The 3-Step Course' sessions for approaching A Course in Miracles are already organized. Group focus sessions. Ongoing guidance and support for achieving inner peace. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicii" class="py-16 text-center section-bg-serenity rounded-lg shadow-md mb-12">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-900">Appointments</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 px-8">
+                <div class="md:w-1/2 text-left">
+                    <blockquote class="text-4xl font-bold italic mb-6 text-gray-900 section-serenity-quote">
+                        „The only ineffective therapy is that which has not yet been requested."
+                    </blockquote>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://tinyurl.com/qtherapy" class="btn-primary inline-block text-center" target="_blank" rel="noopener noreferrer">Book a Session!</a>
+                        <a href="https://tiktok.com/@ofeliaChefneux" class="btn-secondary inline-block text-center" target="_blank" rel="noopener noreferrer">Learn More</a>
+                    </div>
+                </div>
+                <div class="flex justify-center w-full md:w-1/3 md:max-w-sm">
+                    <img src="Programari.png" alt="Imagine Servicii" class="rounded-lg shadow-lg w-full object-contain card-hover">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoniale" class="py-16 text-center">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-900">Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <div class="section-bg-primary p-6 rounded-lg shadow-md text-left card-hover">
+                    <blockquote class="italic mb-4 text-white">
+                        „Eram copleșită de dureri fizice inexplicabile și insomnii, dar sesiunile cu Ofelia au fost o revelație. Am descoperit cum corpul meu exprima emoții și, într-un mediu sigur, am învățat să le procesez. Astăzi, mă bucur de o stare fizică mult îmbunătățită și de o conexiune autentică cu sinele meu. O terapie care vindecă la nivel profund."
+                    </blockquote>
+                    <p class="font-semibold text-white">— Loredana M.</p>
+                </div>
+                <div class="section-bg-secondary p-6 rounded-lg shadow-md text-left card-hover">
+                    <blockquote class="italic mb-4 text-white">
+                        „Con Ofelia logré una transformación asombrosa en mi relación de pareja. Me guió con empatía para comprender y liberar el miedo al abandono y otros patrones tóxicos. Ahora tengo una relación sana, basada en el amor y el respeto. ¡Una experiencia verdaderamente liberadora! La recomiendo de todo corazón."
+                    </blockquote>
+                    <p class="font-semibold text-white">— Ana Isabel C.</p>
+                </div>
+                <div class="section-bg-tertiary-light p-6 rounded-lg shadow-md text-left card-hover">
+                    <blockquote class="italic mb-4 text-gray-700">
+                        „After trying many places, Ofelia brought a miracle into my son's life. The anxiety, isolation, and sleep disturbances disappeared, and he regained his confidence and joy. Ofelia’s approach, deeply connected to the soul of the child, was the key. I sincerely recommend this authentic guide to any parent, with deep gratitude."
+                    </blockquote>
+                    <p class="font-semibold text-gray-900">— Samuel Alexander H.</p>
+                </div>
+                <div class="section-bg-accent p-6 rounded-lg shadow-md text-left card-hover">
+                    <blockquote class="italic mb-4 text-gray-700">
+                        „Terapia bazata pe Cursul de Miracole a fost o călătorie din ceață către claritate. Ofelia m-a însoțit cu o prezență blândă și profund intuitivă, ajutându-mă să mă reconectez cu Sinele meu autentic, acolo unde regăsesc pacea, înțelepciunea și sensul. A fost mai mult decât vindecare – a fost o reîntoarcere acasă, în Mine."
+                    </blockquote>
+                    <p class="font-semibold text-gray-900">— Maria Elena N.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold mb-6">Contact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-2">Email</h3>
+                    <a href="mailto:ofelia.chefneux@gmail.com" class="text-white hover:underline">ofelia.chefneux@gmail.com</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-2">Address</h3>
+                    <p>Bd. Carol I 42, sect.2, Bucharest</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-2">WhatsApp</h3>
+                    <a href="https://tinyurl.com/qtherapy" class="text-white hover:underline" target="_blank" rel="noopener noreferrer">tinyurl.com/qtherapy</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-2">Facebook</h3>
+                    <a href="https://shorturl.at/gf98i" class="text-white hover:underline" target="_blank" rel="noopener noreferrer">/ofeliaChefneux</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-2">TikTok</h3>
+                    <a href="https://tiktok.com/@ofeliaChefneux" class="text-white hover:underline" target="_blank" rel="noopener noreferrer">@ofeliaChefneux</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-2">LinkTree</h3>
+                    <a href="https://tinyurl.com/OfiBio" class="text-white hover:underline" target="_blank" rel="noopener noreferrer">linktr.ee/ofeliaChefneux</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Schimbă iconița hamburger în X și invers
+                if (mobileMenu.classList.contains('hidden')) {
+                    hamburgerBtn.querySelector('i').classList.remove('fa-times');
+                    hamburgerBtn.querySelector('i').classList.add('fa-bars');
+                } else {
+                    hamburgerBtn.querySelector('i').classList.remove('fa-bars');
+                    hamburgerBtn.querySelector('i').classList.add('fa-times');
+                }
+            });
+
+            // Închide meniul mobil când se apasă un link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerBtn.querySelector('i').classList.remove('fa-times');
+                    hamburgerBtn.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
